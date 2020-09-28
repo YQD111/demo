@@ -1,0 +1,43 @@
+<title>Docoument</title>
+<style>
+    #box1 {
+        background-color:red ;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 100px;
+    }
+</style>
+<style>
+    #box2 {
+        background-color:red ;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 100px;
+    }
+</style>
+<body>
+    <div id="box1">
+
+    </div>
+    <input type="button" id="btn0" value="移动">
+
+    <script>
+        var target= document.getElementById("btn0")
+        target.onclick= function (){
+            var box1=document.getElementById("box1").style.left;
+            var box2=document.getElementsById("box1").style.right;
+            box1 = box1.replace("px","")          
+            box1 = Number(box1) + 5;
+            box2 = box2.replace("px","")
+            box2 = Number(box2) + 5;
+            document.getElementById("box1").style.top = box1 +"px";
+            document.getElementById("box1").style.left= box1 +"px";
+            
+        }
+ </Script>
+
+</body>
+
+</html>
